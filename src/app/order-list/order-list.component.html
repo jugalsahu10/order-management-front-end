@@ -1,0 +1,24 @@
+<div class="order-list">
+    <h2>Order List</h2>
+  
+    <div *ngIf="isLoading">Loading orders...</div>
+    
+    <ul *ngIf="!isLoading && orders.length > 0">
+      <li *ngFor="let order of orders">
+        <strong>Order ID:</strong> {{ order.id }}<br>
+        <strong>User ID:</strong> {{ order.userId }}<br>
+        <strong>Products:</strong>
+        <ul>
+          <li *ngFor="let product of order.products">
+            <strong>Product ID:</strong> {{ product.productId }}<br>
+            <strong>Quantity:</strong> {{ product.quantity }}
+          </li>
+        </ul>
+        <strong>Total:</strong> ${{ order.total }}<br>
+        <hr>
+      </li>
+    </ul>
+  
+    <div *ngIf="!isLoading && orders.length === 0">No orders found.</div>
+  </div>
+  

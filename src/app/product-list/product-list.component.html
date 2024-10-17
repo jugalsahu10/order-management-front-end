@@ -1,0 +1,9 @@
+<div>
+    <h2>Product List</h2>
+    <ul>
+      <li *ngFor="let product of products">
+        {{ product.id }} - {{ product.name }} - ${{ product.price }} - Qty: {{ product.quantity }}
+      </li>
+    </ul>
+  </div>
+  

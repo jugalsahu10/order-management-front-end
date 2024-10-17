@@ -1,0 +1,10 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <label for="productId">Product ID:</label>
+    <input id="productId" formControlName="productId" required>
+  
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" formControlName="quantity" type="number" required>
+  
+    <button type="submit">Place Order</button>
+  </form>
+  

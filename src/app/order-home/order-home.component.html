@@ -1,0 +1,12 @@
+<div>
+    <h1>Order Management</h1>
+  
+    <label for="userSelect">Select User:</label>
+    <select id="userSelect" [(ngModel)]="selectedUserId" (change)="onUserChange(selectedUserId)">
+      <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+    </select>
+  
+    <app-place-order [userId]="selectedUserId"></app-place-order> <!-- Pass selectedUserId here -->
+    <app-order-list [userId]="selectedUserId"></app-order-list> <!-- Pass the selected user ID -->
+  </div>
+  
