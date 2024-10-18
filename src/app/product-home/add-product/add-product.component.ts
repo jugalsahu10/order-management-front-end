@@ -1,7 +1,7 @@
 // src/app/add-product/add-product.component.ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProductService } from '../product.service';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-add-product',
